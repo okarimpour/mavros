@@ -169,6 +169,19 @@ target_link_libraries(gcs_bridge
   ${catkin_LIBRARIES}
 )
 
+## Declare the off board node
+add_executable(offb_node
+  src/offb_node.cpp
+)
+add_dependencies(offb_node
+  mavros
+)
+target_link_libraries(offb_node
+  mavros
+  ${catkin_LIBRARIES}
+)
+
+
 #############
 ## Install ##
 #############
